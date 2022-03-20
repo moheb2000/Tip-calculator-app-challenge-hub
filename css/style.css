@@ -12,6 +12,7 @@ html {box-sizing: border-box;}
   --cl-light-grayish-cyan: hsl(185, 41%, 84%);
   --cl-very-light-grayish-cyan: hsl(189, 41%, 97%);
   --cl-white: hsl(0, 0%, 100%);
+  --cl-red: hsl(0, 100%, 50%);
 
   --fs-defualt: 24px;
 
@@ -72,12 +73,19 @@ header {
   text-align: center;
   color: var(--cl-white);
   background-color: var(--cl-very-dark-cyan);
+  transition: color .5s, background-color .5s;
 }
 
-.flex_button[type=button]:hover {
+.flex_button_hover:hover {
   cursor: pointer;
   color: var(--cl-very-dark-cyan);
   background-color: var(--cl-light-grayish-cyan);
+  transition: color .5s, background-color .5s;
+}
+
+.flex_button_choose {
+  color: var(--cl-very-dark-cyan);
+  background-color: var(--cl-strong-cyan);
 }
 
 .input_box {
@@ -148,11 +156,30 @@ header {
   border-radius: .4rem;
   padding: .5rem;
   text-transform: uppercase;
+  transition: background-color .5s;
 }
 
 .reset_button:hover {
   cursor: pointer;
   background-color: var(--cl-light-grayish-cyan);
+  transition: background-color .5s;
+}
+
+.flex_error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  font-size: .7rem;
+  margin-bottom: .5rem;
+  color: var(--cl-red);
+  display: none;
+}
+
+.outline_red,
+.outline_red:focus {
+  outline: 2px solid var(--cl-red);
 }
 
 @media all and (min-width: 425px) {

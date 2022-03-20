@@ -20,15 +20,11 @@
         <label class="label" for="bill">Bill</label>
         <input class="form_component input_box bill_box" id="bill" type="text">
         <p class="label">Select Tip %</p>
-        <div class="form_component flex_buttons">
-          <input class="flex_button" type="button" value="5%">
-          <input class="flex_button" type="button" value="10%">
-          <input class="flex_button" type="button" value="15%">
-          <input class="flex_button" type="button" value="25%">
-          <input class="flex_button" type="button" value="50%">
-          <input class="flex_button custom_button input_box" type="text" placeholder="Custom">
+        <div class="form_component flex_buttons" id="tips"></div>
+        <div class="flex_error">
+          <label class="label" for="people">Number of People</label>
+          <p class="error" id="error">Can't be zero</p>
         </div>
-        <label class="label" for="people">Number of People</label>
         <input class="form_component input_box people_box" id="people" type="text">
       </div>
       <div class="column price_component">
@@ -38,21 +34,17 @@
               <p class="price_title">Tip Amount</p>
               <p class="price_sub">/ person</p>
             </div>
-            <div class="price_column price_rate">
-              0$
-            </div>
+            <div id="tip_price" class="price_column price_rate"></div>
           </div>
           <div class="price_row">
             <div class="price_column">
               <p class="price_title">Total</p>
               <p class="price_sub">/ person</p>
             </div>
-            <div class="price_column price_rate">
-              0$
-            </div>
+            <div id="total_price" class="price_column price_rate"></div>
           </div>
         </div>
-        <button class="reset_button">reset</button>
+        <button id="reset" class="reset_button">reset</button>
       </div>
     </div>
   </main>
