@@ -17,30 +17,42 @@
   <main>
     <div class="container">
       <div class="column">
-        <label for="bill">Bill</label>
-        <input id="bill" type="text">
-        <p>Select Tip %</p>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input type="text" placeholder="Custom">
-        <label for="people">Number of People</label>
-        <input id="people" type="text">
+        <label class="label" for="bill">Bill</label>
+        <input class="form_component input_box bill_box" id="bill" type="text">
+        <p class="label">Select Tip %</p>
+        <div class="form_component flex_buttons">
+          <input class="flex_button" type="button" value="5%">
+          <input class="flex_button" type="button" value="10%">
+          <input class="flex_button" type="button" value="15%">
+          <input class="flex_button" type="button" value="25%">
+          <input class="flex_button" type="button" value="50%">
+          <input class="flex_button custom_button input_box" type="text" placeholder="Custom">
+        </div>
+        <label class="label" for="people">Number of People</label>
+        <input class="form_component input_box people_box" id="people" type="text">
       </div>
-      <div class="column">
-        <div class="price_row">
-          <div class="price_column">
-            Tip Amount<br>/ person
+      <div class="column price_component">
+        <div class="row_commponent">
+          <div class="price_row">
+            <div class="price_column">
+              <p class="price_title">Tip Amount</p>
+              <p class="price_sub">/ person</p>
+            </div>
+            <div class="price_column price_rate">
+              0$
+            </div>
+          </div>
+          <div class="price_row">
+            <div class="price_column">
+              <p class="price_title">Total</p>
+              <p class="price_sub">/ person</p>
+            </div>
+            <div class="price_column price_rate">
+              0$
+            </div>
           </div>
         </div>
-        <div class="price_row">
-          <div class="price_column">
-            Total<br>/ person
-          </div>
-        </div>
-        <button>reset</button>
+        <button class="reset_button">reset</button>
       </div>
     </div>
   </main>

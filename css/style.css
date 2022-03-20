@@ -3,3 +3,179 @@
 
 *, *::before, *::after {box-sizing: inherit;}
 html {box-sizing: border-box;}
+
+:root {
+  --cl-strong-cyan: hsl(172, 67%, 45%);
+  --cl-very-dark-cyan: hsl(183, 100%, 15%);
+  --cl-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --cl-grayish-cyan: hsl(184, 14%, 56%);
+  --cl-light-grayish-cyan: hsl(185, 41%, 84%);
+  --cl-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --cl-white: hsl(0, 0%, 100%);
+
+  --fs-defualt: 24px;
+
+  font: 700 var(--fs-defualt) "Space Mono";
+}
+
+button, input {
+  font: inherit;
+}
+
+label {
+  display: block;
+}
+
+body {
+  background-color: var(--cl-light-grayish-cyan);
+}
+
+header {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  background-color: var(--cl-white);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: .7rem;
+  margin-bottom: .5rem;
+  color: var(--cl-dark-grayish-cyan);
+}
+
+.form_component {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.flex_buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex_button {
+  width: calc(50% - 1rem);
+  margin: .5rem;
+  padding: .5rem;
+  border: none;
+  border-radius: .4rem;
+  text-align: center;
+  color: var(--cl-white);
+  background-color: var(--cl-very-dark-cyan);
+}
+
+.flex_button[type=button]:hover {
+  cursor: pointer;
+  color: var(--cl-very-dark-cyan);
+  background-color: var(--cl-light-grayish-cyan);
+}
+
+.input_box {
+  border: none;
+  border-radius: .4rem;
+  padding: 0 .5rem;
+  text-align: right;
+  background-color: var(--cl-very-light-grayish-cyan);
+  color: var(--cl-very-dark-cyan);
+}
+
+.input_box::placeholder {
+  color: var(--cl-dark-grayish-cyan);
+}
+
+.input_box:focus {
+  outline: 2px solid var(--cl-strong-cyan);
+}
+
+.bill_box {
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: left .5rem center;
+  padding-left: 1rem;
+}
+
+.people_box {
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: left .5rem center;
+  padding-left: 1rem;
+}
+
+.price_component {
+  background-color: var(--cl-very-dark-cyan);
+  border-radius: .4rem;
+  padding: 1rem;
+}
+
+.price_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.price_title {
+  color: var(--cl-white);
+  font-size: .7rem;
+  margin-bottom: .25rem;
+}
+
+.price_sub {
+  color: var(--cl-grayish-cyan);
+  font-size: .5rem;
+}
+
+.price_rate {
+  font-size: 1.5rem;
+  color: var(--cl-strong-cyan);
+}
+
+.reset_button {
+  width: 100%;
+  color: var(--cl-very-dark-cyan);
+  background-color: var(--cl-strong-cyan);
+  border: none;
+  border-radius: .4rem;
+  padding: .5rem;
+  text-transform: uppercase;
+}
+
+.reset_button:hover {
+  cursor: pointer;
+  background-color: var(--cl-light-grayish-cyan);
+}
+
+@media all and (min-width: 425px) {
+  .flex_button {
+    width: calc(100% / 3 - 1rem);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+  }
+
+  .column {
+    flex: 1;
+  }
+
+  .price_component {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
